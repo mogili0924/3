@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 시설 고장 신고함</title>
+    <style>
+        body {
+            font-family: '맑은 고딕', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* 삐져나감 방지 */
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>🛠️ 학교 시설 고장 신고</h2>
+    <form>
+        <label for="location">고장난 장소 (예: 본관 2층 화장실)</label>
+        <input type="text" id="location" name="location" placeholder="정확한 위치를 적어주세요" required>
+
+        <label for="type">고장 종류</label>
+        <select id="type" name="type">
+            <option value="water">💧 시설고장</option>
+            <option value="electric">⚠️ 안전문제</option>
+            <option value="door"> 💡 학교생활 환경 개선 아이디어</option>
+            <option value="other">🎸기타</option>
+        </select>
+
+        <label for="details">상세 내용</label>
+        <textarea id="details" name="details" rows="4" placeholder="어떤 문제가 있는지 설명해주세요" required></textarea>
+
+        <button type="button" onclick="alert('아직 데이터 전송 기능은 연결되지 않았습니다! 화면 디자인만 완성된 상태에요.')">신고하기</button>
+    </form>
+</div>
+
+</body>
+</html>
